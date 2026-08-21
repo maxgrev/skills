@@ -36,11 +36,11 @@ For detect requests, check only the Detect section.
 
 ## Patterns to cut
 
-1. Are binary contrasts, negative listings, rhetorical setups, and throat-clearing openers removed?
+1. Are binary contrasts removed in every form, including verb-based ones ("X does little, but Y works") that match no template phrasing? Are negative listings, rhetorical setups, and throat-clearing openers gone?
 2. Are faux-insight setups, colon reveals and connectors, superficial analysis, fake-strong verbs (serves as, stands as, boasts, features), synonym cycling, dramatic fragments, and robotic rhythm fixed?
 3. Are importance puffery, promotional adjectives, and weasel attribution replaced with plain facts and named sources, or flagged for the user when no source exists?
 4. Are forced groups of three and false "from X to Y" ranges replaced with the natural number or a plain list?
-5. Are fake-profound kicker lines deleted instead of rewritten into better metaphors?
+5. Are fake-profound kicker lines and short pronouncement sentences ("The checklist is the point") deleted instead of rewritten?
 6. Are summary-recap endings and generic forward-looking closers cut so the piece ends on a concrete point, takeaway, or next action?
 7. Is chatbot residue removed ("I hope this helps," "Great question," "Let me know if")?
 8. Is formatting slop removed: emoji headings, Title Case headings, decorative bold, bold on every proper noun, bullets that should be prose, headings over tiny sections, and inline-header lists whose bold label restates the line?
@@ -54,7 +54,7 @@ For detect requests, check only the Detect section.
 3. Would the writer recognize the edited draft as their own voice?
 4. Would the edited draft sound natural if read to a sharp colleague?
 5. After all checks, what still makes this read as AI-generated? Fix it.
-6. Does the final output include the full edited draft and a short **What changed** section?
+6. Does the final output include the full edited draft and a short **What changed** section that names the checks that failed and their fixes, or states that none failed?
 
 ## Detect
 

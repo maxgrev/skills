@@ -85,7 +85,7 @@ Keep an item when it carries real emphasis, uncertainty, contrast, or the writer
 
 ## Patterns to cut
 
-- **Binary contrasts.** Replace "This is not X. It's Y," "The question isn't X, it's Y," and "It's not just X but Y" with the direct claim. Change "The question isn't the model. It's the eval" to "The eval matters more than the model."
+- **Binary contrasts.** Replace "This is not X. It's Y," "The question isn't X, it's Y," and "It's not just X but Y" with the direct claim. Change "The question isn't the model. It's the eval" to "The eval matters more than the model." The tell is the shape, not those three wordings. "Telling it to write well does little, but a named list works," "X is easy; Y is what counts," and any sentence that props up a claim by first naming a weaker opposite are the same move wearing different verbs. Delete the foil and state the claim alone.
 - **Throat-clearing openers.** Cut "Here's the thing," "Here's what I mean," "Let me be clear," "I'll be honest," and "The uncomfortable truth is." State the point.
 - **Faux-insight setups.** Cut "This is the part most people skip," "What most people get wrong," "Here's what nobody tells you," and "The part everyone misses." Let the claim stand. Change "The part everyone misses: distribution is the real moat" to "Distribution is the moat."
 - **Colon reveals and connectors.** Rewrite a noun phrase followed by a lowercase dramatic reveal as a plain sentence. Change "The detail that makes it work: a separate agent grades it" to "A separate agent does the grading, which is what makes it work." Also cut colons used as mid-sentence joints: "If you're coming from traditional automation: instead of registering handlers, you describe conditions" becomes "You describe conditions in plain English instead of registering handlers." Keep colons for lists, labels, examples, and quotes. Prefer sentence case after a colon unless grammar, a proper noun, a title, or code requires otherwise.
@@ -98,7 +98,7 @@ Keep an item when it carries real emphasis, uncertainty, contrast, or the writer
 - **Promotional adjectives.** Cut "nestled," "vibrant," "breathtaking," "stunning," "renowned," "must-visit," "world-class." Describe the thing plainly and let the reader rate it.
 - **Synonym cycling.** Repeat the clear word instead of rotating terms for style. Change "The agent reviews the draft. The assistant scores the piece. The tool suggests fixes" to "The agent reviews the draft, scores it, and suggests fixes."
 - **Negative listing.** Replace "Not a X. Not a Y. A Z" with "A Z."
-- **Dramatic fragmentation.** Replace "X. And Y. And Z" and "That's it. That's the whole thing" with complete sentences.
+- **Dramatic fragmentation, and the short pronouncement.** Replace "X. And Y. And Z" and "That's it. That's the whole thing" with complete sentences. Same family: the three-to-five-word verdict set as its own sentence to sound weighty ("The checklist is the point," "That's the whole trick," "This is the difference"). It usually sets up the sentence after it. Cut the verdict and let that sentence carry the claim.
 - **Robotic rhythm.** Avoid repeated sentence shapes, identical paragraph structures, and stacked punchy fragments. Vary the shape only when it helps the point.
 - **Rhetorical setups.** Drop "What if I told you...", "Think about it:", "Plot twist:", and self-answered "Question? Answer." pairs. State the point.
 - **Fake-profound kickers.** Delete the final "deep" line when it turns the point into a cute metaphor, aphorism, or mic-drop. Do not improve the metaphor or preserve its rhythm. End on the clearest concrete sentence already in the draft. Add a plain takeaway or next action only if the ending needs closure.
@@ -115,4 +115,4 @@ Keep an item when it carries real emphasis, uncertainty, contrast, or the writer
 3. For a detect request, return the findings report described above and stop.
 4. For an edit, make the minimum effective changes.
 5. Read [references/eval.md](references/eval.md) and check the edited draft against every item yourself. Then ask one more question: "What still makes this read as AI-generated?" Fix what you find, then check again.
-6. Return the full edited draft and a short **What changed** section.
+6. Return the full edited draft and a short **What changed** section. End it with the eval result: name the checks that failed and what you changed, or write "no checks failed." Never claim the eval ran without naming what it caught.

@@ -2,7 +2,7 @@
 
 Two skills in the [Agent Skills](https://agentskills.io) format. They work with any agent that reads a `SKILL.md`: Claude Code, Codex, Cursor, Zed, Warp, Cline and the rest.
 
-Each skill is a `SKILL.md` the agent follows, plus a `references/eval.md` checklist it runs against its own output before returning anything. The checklist is the point. Telling an agent to "write well" or "avoid slop" does little, but a list of named patterns it must check itself against works.
+Each skill is a `SKILL.md` the agent follows, plus a `references/eval.md` checklist it runs against its own output before returning anything. Each check is specific enough to fail: "are colons sentence case," "does every descriptive sentence name a mechanism, fact, or number instead of a feeling."
 
 ## The skills
 
