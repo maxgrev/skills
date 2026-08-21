@@ -1,41 +1,74 @@
 # Skills
 
-Two skills for Claude Code. Each one is a `SKILL.md` that tells Claude how to do the job, plus a `references/eval.md` checklist that Claude runs against its own output before it returns anything.
+Two skills in the [Agent Skills](https://agentskills.io) format. They work with any agent that reads a `SKILL.md`: Claude Code, Codex, Cursor, Zed, Warp, Cline and the rest.
 
-## better-writing
+Each skill is a `SKILL.md` the agent follows, plus a `references/eval.md` checklist it runs against its own output before returning anything. The checklist is the point. Telling an agent to "write well" or "avoid slop" does little. Giving it a list of named patterns to check itself against works.
 
-Edits a draft into clearer, more direct writing while keeping the writer's voice. It also runs in detect mode: name the AI patterns in a draft, quote the lines, suggest a fix, change nothing.
+## The skills
 
-Orwell's six rules sit at the top and apply to every edit and to everything the skill writes itself. Below them sit a ban list (delve, leverage, robust, tapestry and the rest), metaphor nouns that hide a plain word (substrate, wedge, vector, flywheel), and the patterns that mark text as generated, such as binary contrasts, colon reveals, forced groups of three, fake-profound kickers, em dashes and inline-header lists.
-
-Invoke it with `/better-writing` and paste the draft, or ask for a draft to be clearer, less AI-sounding, or audited.
-
-## better-design
-
-A set of evals for any work that touches an interface: web, mobile, desktop, marketing pages, design systems, generated UI images. Claude reads the full eval before designing, builds, then audits the rendered result against every point and fixes what fails.
-
-The eval lists the recognizable defaults (component, copy, shadow, color, type, layout and motion tells), the execution failures that read as bugs (content hidden behind entrance animations, clipped descenders, nothing centered, unreadable forms), rules for mobile screens and redesigns, and what premium work does instead: a signature artifact, self-colored borders, springs that respond on press, licensed type.
-
-It loads on its own for design work. The user's explicit direction beats any default in it.
+- **[better-writing](skills/better-writing/SKILL.md).** Edits a draft into clearer, more direct writing while keeping the writer's voice. Also runs in detect mode: name the AI patterns in a draft, quote the lines, give the fix, change nothing. Orwell's six rules sit on top. Below them, a ban list (delve, leverage, robust, tapestry), metaphor nouns that hide a plain word (substrate, wedge, vector, flywheel), and the patterns that mark text as generated, such as binary contrasts, colon reveals, forced groups of three, fake-profound kickers, em dashes and inline-header lists.
+- **[better-design](skills/better-design/SKILL.md).** Evals for any work that touches an interface: web, mobile, desktop, marketing pages, design systems, generated UI images. The agent reads the full list before designing, builds, then audits the rendered result point by point and fixes what fails. It covers the recognizable defaults (component, copy, shadow, color, type, layout and motion tells), the failures that read as bugs (content hidden behind entrance animations, clipped descenders, nothing centered, unreadable forms), mobile screens, redesigns, and what premium work does instead: a signature artifact, self-colored borders, springs that respond on press, licensed type.
 
 ## Install
 
-Claude Code loads skills from `~/.claude/skills`. Link each folder there:
+One command, any agent:
 
 ```bash
-ln -s "$PWD/better-writing" ~/.claude/skills/better-writing
-ln -s "$PWD/better-design" ~/.claude/skills/better-design
+npx skills add maxgrev/skills
 ```
 
-A symlink means edits here go live at once. A copy needs re-copying after each change.
+The CLI asks which skills and which agents, then symlinks each skill into the agent's skills folder. Add `-g` to install for all your projects rather than the current one, and `--copy` where symlinks will not work.
+
+One skill, one agent, globally:
+
+```bash
+npx skills add maxgrev/skills --skill better-writing -g -a claude-code
+```
+
+### By hand
+
+Clone the repo and link or copy each skill folder into the agent's skills directory.
+
+| Agent | Project | Global |
+| --- | --- | --- |
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` |
+| Codex | `.agents/skills/` | `~/.codex/skills/` |
+| Cursor | `.agents/skills/` | `~/.cursor/skills/` |
+| Zed, Warp, Cline, Amp | `.agents/skills/` | `~/.agents/skills/` |
+
+Other agents are listed in the [skills CLI README](https://github.com/vercel-labs/skills#supported-agents).
+
+```bash
+git clone https://github.com/maxgrev/skills.git
+cd skills
+ln -s "$PWD/skills/better-writing" ~/.claude/skills/better-writing
+ln -s "$PWD/skills/better-design" ~/.claude/skills/better-design
+```
+
+A symlink picks up edits at once. A copy needs re-copying after each change.
+
+## Use
+
+Once installed, the agent loads a skill when the task matches its description. You can also ask for it by name:
+
+> Use better-writing on this draft.
+
+> Use better-design and review the landing page before we ship.
+
+In Claude Code, `/better-writing` also works.
 
 ## Layout
 
 ```
-better-writing/
-  SKILL.md            instructions Claude follows
-  references/eval.md  checklist Claude runs on its own output
-better-design/
-  SKILL.md
-  references/eval.md
+skills/
+  better-writing/
+    SKILL.md            what the agent does
+    references/eval.md  what it checks its output against
+  better-design/
+    SKILL.md
+    references/eval.md
 ```
+
+## License
+
+MIT.
