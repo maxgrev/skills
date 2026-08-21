@@ -2,7 +2,7 @@
 
 Two skills in the [Agent Skills](https://agentskills.io) format. They work with any agent that reads a `SKILL.md`: Claude Code, Codex, Cursor, Zed, Warp, Cline and the rest.
 
-Each skill is a `SKILL.md` the agent follows, plus a `references/eval.md` checklist it runs against its own output before returning anything. The checklist is the point. Telling an agent to "write well" or "avoid slop" does little. Giving it a list of named patterns to check itself against works.
+Each skill is a `SKILL.md` the agent follows, plus a `references/eval.md` checklist it runs against its own output before returning anything. The checklist is the point. Telling an agent to "write well" or "avoid slop" does little, but a list of named patterns it must check itself against works.
 
 ## The skills
 
@@ -36,7 +36,7 @@ Clone the repo and link or copy each skill folder into the agent's skills direct
 | Cursor | `.agents/skills/` | `~/.cursor/skills/` |
 | Zed, Warp, Cline, Amp | `.agents/skills/` | `~/.agents/skills/` |
 
-Other agents are listed in the [skills CLI README](https://github.com/vercel-labs/skills#supported-agents).
+The [skills CLI README](https://github.com/vercel-labs/skills#supported-agents) lists the other agents.
 
 ```bash
 git clone https://github.com/maxgrev/skills.git
