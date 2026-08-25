@@ -1,0 +1,4 @@
+interface:
+  display_name: "Better Copywriting"
+  short_description: "Write sharper conversion-focused marketing copy"
+  default_prompt: "Use $better-copywriting to create persuasive copy for my offer."
