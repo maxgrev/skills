@@ -67,6 +67,25 @@ Run every applicable check before delivering created or rewritten copy. Fix fail
 - [ ] The copy does not sound like a collage of swipe-file formulas.
 - [ ] Source examples informed strategic decisions without donating distinctive phrases or syntax too closely.
 
+## Human voice and AI tells
+
+- [ ] The draft preserves the user's vocabulary, cadence, bluntness, warmth, humor, restraint, and level of polish where supplied.
+- [ ] No sentence could be pasted unchanged onto a competitor's page because it contains only generic praise or feeling.
+- [ ] Flagged AI words, empty transitions, and unsupported copywriting superlatives from [human-writing.md](human-writing.md) are removed or justified by voice and meaning.
+- [ ] Generic binary contrasts, negative listings, faux-insight setups, and stock entrances are gone.
+- [ ] Colons introduce real lists, labels, examples, quotations, or offer inventories rather than dramatic reveals.
+- [ ] Benefits, sections, bullets, adjectives, and fragments use their natural count rather than default groups of three.
+- [ ] No false “from X to Y” range turns unrelated items into a fake journey.
+- [ ] No trailing “highlighting,” “underscoring,” “showcasing,” or “reflecting” clause substitutes for a real consequence.
+- [ ] Authority and popularity claims name a source; “experts agree,” “studies show,” and similar attributions are not invented.
+- [ ] The draft repeats the clearest product and audience terms instead of cycling through synonyms.
+- [ ] Punchy fragments, questions, repetition, punctuation, and contrast each perform a deliberate selling job rather than supply generic drama.
+- [ ] Sentence lengths, paragraph shapes, and section structures do not repeat with robotic symmetry.
+- [ ] Formatting serves scanning and decision-making without emoji headings, decorative bold, needless micro-sections, or repetitive inline labels.
+- [ ] Short copy has no em dash; longer copy uses at most one or two unless the supplied voice clearly calls for more.
+- [ ] The ending lands on a concrete offer, proof point, instruction, or next action rather than a recap, aphorism, or manifesto line.
+- [ ] Customer-facing copy contains no chatbot residue.
+
 ## Source fidelity
 
 - [ ] Any historical wording presented to the user as an example is actually verbatim and attributed; summaries and transfer examples are labeled.
@@ -92,5 +111,6 @@ Before delivery, answer these questions internally:
 3. Which sentence makes the largest promise, and is the adjacent support strong enough?
 4. What can be cut without reducing desire, belief, clarity, or action?
 5. What sounds like advertising instead of a knowledgeable person explaining a worthwhile decision?
+6. What still makes this read as AI-generated, and which exact words, rhythms, structures, or formatting choices create that impression?
 
 Revise once more based on the answers. If a material gap requires user evidence or a business decision, disclose it concisely after the copy.

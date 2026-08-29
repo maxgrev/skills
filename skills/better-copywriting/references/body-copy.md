@@ -163,3 +163,4 @@ Deliver real informational value and disclose the commercial relationship. Edito
 5. **Language:** Replace abstractions, weak verbs, jargon, and redundant intensification.
 6. **Friction:** Clarify terms, remove dead ends, and make the next step obvious.
 7. **Voice:** Restore the user's cadence, vocabulary, restraint, humor, or edge where editing flattened it.
+8. **Human pass:** Read [human-writing.md](human-writing.md), remove default AI patterns, read the copy aloud, and retain only the rhetorical devices that earn their place.
