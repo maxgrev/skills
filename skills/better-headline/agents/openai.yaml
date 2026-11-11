@@ -1,0 +1,4 @@
+interface:
+  display_name: "Better Headline"
+  short_description: "Write and check headlines readers want to open"
+  default_prompt: "Use $better-headline to write stronger headlines for this draft."

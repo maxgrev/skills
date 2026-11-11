@@ -1,6 +1,6 @@
 # Skills
 
-Three skills in the [Agent Skills](https://agentskills.io) format. They work with any agent that reads a `SKILL.md`: Claude Code, Codex, Cursor, Zed, Warp, Cline and the rest.
+Four skills in the [Agent Skills](https://agentskills.io) format. They work with any agent that reads a `SKILL.md`: Claude Code, Codex, Cursor, Zed, Warp, Cline and the rest.
 
 Each skill has a `SKILL.md` entrypoint and task-specific references. The agent loads only the references relevant to the current job, then runs the skill's `references/eval.md` checklist before returning finished work. Each check is specific enough to fail: "are colons sentence case," "does every descriptive sentence name a mechanism, fact, or number instead of a feeling," or "is the largest claim supported nearby?"
 
@@ -9,6 +9,7 @@ Each skill has a `SKILL.md` entrypoint and task-specific references. The agent l
 - **[better-writing](skills/better-writing/SKILL.md).** Edits a draft into clearer, more direct writing while keeping the writer's voice. Also runs in detect mode: name the AI patterns in a draft, quote the lines, give the fix, change nothing. Orwell's six rules sit on top. Below them, a ban list (delve, leverage, robust, tapestry), metaphor nouns that hide a plain word (substrate, wedge, vector, flywheel), and the patterns that mark text as generated, such as binary contrasts, colon reveals, forced groups of three, fake-profound kickers, em dashes and inline-header lists.
 - **[better-design](skills/better-design/SKILL.md).** Evals for any work that touches an interface: web, mobile, desktop, marketing pages, design systems, generated UI images. The agent reads the full list before designing, builds, then audits the rendered result point by point and fixes what fails. It covers the recognizable defaults (component, copy, shadow, color, type, layout and motion tells), the failures that read as bugs (content hidden behind entrance animations, clipped descenders, nothing centered, unreadable forms), mobile screens, redesigns, and what premium work does instead: a signature artifact, self-colored borders, springs that respond on press, licensed type.
 - **[better-copywriting](skills/better-copywriting/SKILL.md).** Creates, rewrites, humanizes and critiques conversion copy for ads, landing pages, sales pages, emails, offers, product pages and calls to action. It begins with audience, desire, awareness, sophistication, proof, traffic and offer—not a favorite formula. Its routed source library retains 171 examples and campaign cases plus 140 lessons from David Ogilvy, Eugene Schwartz, Joseph Sugarman, Drew Eric Whitman, Russell Brunson and Claude Hopkins. A separate human-writing pass removes the generated-copy defaults that survive an ordinary polish: generic binary contrasts, faux-insight setups, forced triads, empty superlatives, stacked fragments, robotic symmetry, colon reveals, decorative formatting and fake-profound endings. Copywriting exceptions preserve deliberate repetition, questions, bullets, contrast and strong punctuation when they perform a real selling job.
+- **[better-headline](skills/better-headline/SKILL.md).** Writes, rewrites, compares and critiques article headlines, with optional first two preview lines. It draws on @fuckgrowth's September 2026 X Article research and includes 6,835 source headlines, an offline example finder and a pattern checker. It explores distinct angles, checks every promise against the draft and treats the L0-L4 levels as wording patterns. The skill keeps X-specific findings separate from advice for blogs, essays and newsletters.
 
 ## Install
 
@@ -58,6 +59,8 @@ Once installed, the agent loads a skill when the task matches its description. Y
 
 > Use better-copywriting to rewrite this landing page for problem-aware search traffic.
 
+> Use better-headline to write headline options for this article.
+
 In Claude Code, `/better-writing` also works.
 
 ## Layout
@@ -86,6 +89,19 @@ skills/
       body-copy.md
       human-writing.md
       eval.md
+  better-headline/
+    SKILL.md
+    agents/openai.yaml
+    scripts/
+      headline_check.py
+      find_examples.py
+    references/
+      research.md
+      patterns.md
+      hooks.md
+      eval.md
+      articles-over-100k.csv
+    tests/test_headline_tools.py
 ```
 
 ## License
